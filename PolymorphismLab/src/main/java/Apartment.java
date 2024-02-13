@@ -1,4 +1,6 @@
-public class Apartment extends Residential {
+import interfaces.IRoom;
+
+public class Apartment extends Residential implements IRoom {
     private boolean Studio;
     private int locationInBuilding;
     private int numberOfLifts;

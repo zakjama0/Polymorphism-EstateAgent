@@ -1,8 +1,11 @@
+import interfaces.IRoom;
+
 import java.util.ArrayList;
 
 public class EstateAgent {
     // Private Variables
-    private ArrayList<Property> propertyList;
+    // interface array list
+    private ArrayList<IRoom> propertyList;
     private int till;
 
     //Constructor Function

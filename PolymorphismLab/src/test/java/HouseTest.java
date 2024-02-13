@@ -16,5 +16,10 @@ public class HouseTest {
         house.addFloor();
         assertThat(house.getNumberOfFloors()).isEqualTo(3);
     }
+    @Test
+    public void checkNewRooms(){
+        house.addRoom(3);
+        assertThat(house.getNumberOfRooms()).isEqualTo(8);
+    }
 
 }

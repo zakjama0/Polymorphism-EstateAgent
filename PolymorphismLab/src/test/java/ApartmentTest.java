@@ -17,4 +17,10 @@ public class ApartmentTest {
         apartment.addLift();
         assertThat(apartment.getNumberOfLifts()).isEqualTo(7);
     }
+    @Test
+    //Testing interface
+    public void canAddRoom(){
+        apartment.addRoom(6);
+        assertThat(apartment.getNumberOfRooms()).isEqualTo(11);
+    }
 }

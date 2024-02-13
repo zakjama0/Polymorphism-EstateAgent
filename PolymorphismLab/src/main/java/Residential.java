@@ -1,7 +1,9 @@
-public abstract class Residential extends Property{
+import interfaces.IRoom;
+
+public abstract class Residential extends Property implements IRoom {
 
     private int numberOfToilets;
-    private int numberOfBedrooms;
+    protected int numberOfBedrooms;
     private String familyName;
     public Residential(int inputNumberOfBedrooms, int inputNumberOfToilets, String inputFamilyName, int inputDateOfConstruction, String inputOwnerOfBuilding, String inputPostcode, int inputNumberOfRooms, int inputPrice){
         super(inputDateOfConstruction, inputPostcode,  inputPrice, inputOwnerOfBuilding, inputNumberOfRooms);
@@ -11,10 +13,12 @@ public abstract class Residential extends Property{
     }
 
     //Method
-    public void addBedroom(){
-        numberOfBedrooms = numberOfBedrooms +1;
+    public void addBedroom( int inputNumberOfRooms){
+        numberOfBedrooms = numberOfBedrooms + inputNumberOfRooms;
     }
-
+    public int addRoom( int inputNumberOfRoom){
+        return numberOfRooms = numberOfRooms + inputNumberOfRoom;
+    }
 
     // Setters and Getters
     public int getNumberOfToilets() {

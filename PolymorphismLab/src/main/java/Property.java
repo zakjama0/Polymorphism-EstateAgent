@@ -1,10 +1,12 @@
-public abstract class Property {
+import interfaces.IRoom;
+
+public abstract class Property implements IRoom {
     // Private Variables
     private int dateOfConstruction ;
     private String ownerOfBuilding;
 
     private String postcode;
-    private int numberOfRooms;
+    protected int numberOfRooms;
     private int price;
 
     // Constructor Function
@@ -15,6 +17,9 @@ public abstract class Property {
         this.price = inputPrice;
         this.numberOfRooms = inputNumberOfRooms;
     }
+
+    // Abstract Method
+    public  abstract int addRoom( int inputNumberOfRoom);
 
     // Setters and Getters
     public String getPostcode(){
@@ -27,10 +32,6 @@ public abstract class Property {
 
     public void setDateOfConstruction(int inputDayOfConstruction){
         this.dateOfConstruction = inputDayOfConstruction;
-    }
-
-    public void addRoom(){
-        numberOfRooms = numberOfRooms + 1;
     }
 
     public void setPostcode(String postcode) {

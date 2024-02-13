@@ -10,13 +10,15 @@ public class EstateAgentTest {
     @BeforeEach
     public void setup(){
         estateAgent = new EstateAgent(0);
-       house = new House(2,5,2,"Jama", 120224,"Jama","SE18",5,500);
+        house = new House(2,5,2,"Jama", 120224,"Jama","SE18",5,500);
     }
     @Test
     public void checkAddProperty(){
         estateAgent.addProperty(house);
         assertThat(estateAgent.getListSize()).isEqualTo(1);
     }
+
+    //Testing the interface array list
     @Test
     public void propertyBought(){
         estateAgent.addProperty(house);

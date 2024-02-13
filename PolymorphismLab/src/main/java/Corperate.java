@@ -1,4 +1,6 @@
-public class Corperate extends Property{
+import interfaces.IRoom;
+
+public class Corperate extends Property implements IRoom {
     private int numberOfOffices;
     private int numberOfComputer;
     private String nameOfCompany;
@@ -12,6 +14,10 @@ public class Corperate extends Property{
 
     public void addOffice(){
         numberOfOffices = numberOfOffices + 1;
+    }
+
+    public  int addRoom( int inputNumberOfRoom){
+        return numberOfRooms = numberOfRooms + inputNumberOfRoom;
     }
 
     public void addComputer(){
